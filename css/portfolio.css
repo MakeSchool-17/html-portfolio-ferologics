@@ -1,0 +1,60 @@
+* { margin: 0; padding: 0; }
+@font-face {
+	font-family: "Retro";
+	src: url("./Perfect\ DOS\ VGA\ 437.ttf");
+}
+.flex-container {
+	list-style: none;
+	
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	background: #ec7676;
+	margin: 0;
+
+	flex-direction: row;
+	/* justify-content: space-around; */
+}
+.flex-container li {
+	background-color: #ec7676;
+	flex-grow: 1;
+	text-align: center;
+	padding-top: 5;
+	padding-bottom: 5;
+}
+.flex-container li:hover {
+	background: #ecb176;
+}
+.body {
+	background-color: #ec7676;
+	font-size: 100%;
+	font-family: "Retro";
+}
+.title {
+	color: #e33333;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.button {
+	background-color: #e33333;
+	border: 8px outset;
+	padding: 14;
+}
+.button:hover {
+	background-color: #ecb176;
+	cursor: pointer;
+}
+a {
+	color: #ecb176;
+	text-decoration: none;
+	font-family: "Retro";
+}
+
+a:hover     { color: #e33333; }
+.main       { font-size: 78px; }
+.sub        { font-size: 47px; }
+.footer-sub { font-size: 30px; }
+.header     { border-top: solid 5px #e33333 }
