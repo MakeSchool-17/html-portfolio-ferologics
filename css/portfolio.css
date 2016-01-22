@@ -1,51 +1,8 @@
+/* initial setup fot the website */
 * { margin: 0; padding: 0; }
 @font-face {
 	font-family: "Retro";
 	src: url("./Perfect\ DOS\ VGA\ 437.ttf");
-}
-.flex-container {
-	list-style: none;
-	
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-
-	background: #ec7676;
-	margin: 0;
-
-	flex-direction: row;
-	/* justify-content: space-around; */
-}
-.flex-container li {
-	background-color: #ec7676;
-	flex-grow: 1;
-	text-align: center;
-	padding-top: 5;
-	padding-bottom: 5;
-}
-.flex-container li:hover {
-	background: #ecb176;
-}
-.body {
-	background-color: #ec7676;
-	font-size: 100%;
-	font-family: "Retro";
-}
-.title {
-	color: #e33333;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
-.button {
-	background-color: #e33333;
-	border: 8px outset;
-	padding: 14;
-}
-.button:hover {
-	background-color: #ecb176;
-	cursor: pointer;
 }
 a {
 	color: #ecb176;
@@ -53,8 +10,129 @@ a {
 	font-family: "Retro";
 }
 
-a:hover     { color: #e33333; }
-.main       { font-size: 78px; }
-.sub        { font-size: 47px; }
-.footer-sub { font-size: 30px; }
-.header     { border-top: solid 5px #e33333 }
+/* page body */
+.body {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+
+	background-color: #ec7676;
+	font-size: 2vw;
+	font-family: "Retro";
+}
+
+/* header part of the website */ 
+.header { border-top: solid 0.5vw #e33333 }
+.flex-container {
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	flex-direction: row; /* defaults to row anyways but to make it less confusing just putting it out there*/
+
+	/* position: fixed; */
+	/* width: 100%; */
+
+	list-style: none;
+	background: #ec7676;
+}
+.flex-container li {
+	background-color: #e33333;
+	flex-grow: 1;
+	text-align: center;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	border: 0.65vw outset;
+}
+.flex-container li:hover     { background: #ecb176; }
+.flex-container li:hover > a { color:      #e33333; }
+
+/* the middle part, the section */
+.content {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+.ms-logo {
+	background-image: url("https://goo.gl/RG3GtK");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.image {
+	display: flex;
+	justify-content: center;
+}
+.image-wrap {
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 50%;
+	width: 100%;
+}
+.image-wrap:hover > .pepe {
+	display: flex;
+}
+.image-wrap:hover > .fero {
+	display: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.pepe { 
+	display: none;
+	border-radius: 50%;
+}
+.image-wrap .pepe {
+	border: 1.5vw double;
+	border-color: #e33333;
+}
+.fero { 
+	display: flex;
+	border-radius: 50%;
+}
+.image-wrap .fero {
+	border: 1.5vw double;
+}
+.website-text {
+	margin-left: auto;
+	margin-right: auto;
+}
+.title {
+	color: #e33333;
+	text-transform: uppercase;
+	letter-spacing: 0.3vw;
+}
+.main { font-size: 8vw; }
+.sub  { font-size: 4vw; }
+
+/* footer */
+.footer {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+
+	margin-top: 10vw;
+}
+.button {
+	background-color: #e33333;
+	border: 0.955vw outset;
+
+	padding-left: 1.6vw;
+	padding-right: 1.6vw;
+	padding-top: 1.2vw;
+	padding-bottom: 1.2vw;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1vw;
+}
+.button:hover {
+	background-color: #ecb176;
+	cursor: pointer;
+}
+.button:hover > a { color: #e33333; }
+.footer-sub { font-size: 3vw; }
+
+/* other */
